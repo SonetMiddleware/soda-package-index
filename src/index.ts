@@ -24,6 +24,12 @@ const APP_CONFIG: Record<number, AppConfig> = {
     storageService: ['ipfs'],
     mpService: ['nashmarket'],
     mediaType: ['image']
+  },
+  1: {
+    assetService: ['opensea'],
+    storageService: ['ipfs'],
+    mpService: ['opensea'],
+    mediaType: ['image']
   }
 }
 
