@@ -1,10 +1,11 @@
-import { PlatwinAssetInit } from '@soda/soda-asset'
-import imageKitInit from '@soda/soda-image-kit'
+import { ImageInit } from '@soda/soda-media-sdk'
+import { IpfsInit } from '@soda/soda-storage-sdk'
 
-import ipfsKitInit from '@soda/soda-ipfs-kit'
+import { ChainInit, PlatwinAssetInit } from '@soda/soda-asset'
 
 import nashmarketInit from '@soda/soda-nashmarket'
 import openseaInit from '@soda/soda-opensea'
+
 export type AppConfig = {
   assetService: string[]
   storageService: string[]
@@ -22,7 +23,7 @@ const APP_CONFIG: Record<number, AppConfig> = {
   80001: {
     assetService: ['platwin'],
     storageService: ['ipfs'],
-    mpService: ['nashmarket'],
+    mpService: ['nash'],
     mediaType: ['image']
   },
   1: {
@@ -33,20 +34,29 @@ const APP_CONFIG: Record<number, AppConfig> = {
   }
 }
 
-const getAppConfig = (chainId: number): AppConfig => {
+export const getAppConfig = (chainId: number): AppConfig => {
   if (!APP_CONFIG[chainId]) {
     throw new Error('ChainId ' + chainId + ' not supported')
   }
   return APP_CONFIG[chainId]
 }
 const init = () => {
+  ImageInit()
+  IpfsInit()
+
+  ChainInit()
   PlatwinAssetInit()
 
-  imageKitInit()
-  ipfsKitInit()
   nashmarketInit()
   openseaInit()
 }
 
 export default init
-export { getAppConfig }
+
+import { bgInit as utilBgInit } from '@soda/soda-util'
+import { bgInit as platwinBgInit } from '@soda/soda-asset'
+
+export const bgInit = () => {
+  utilBgInit()
+  platwinBgInit()
+}

@@ -19,10 +19,11 @@
   "license": "ISC",
   "dependencies": {
     "@soda/soda-asset": "workspace:^0.0.1",
-    "@soda/soda-image-kit": "workspace:^0.0.1",
-    "@soda/soda-ipfs-kit": "workspace:^0.0.1",
+    "@soda/soda-media-sdk": "workspace:^0.0.1",
+    "@soda/soda-storage-sdk": "workspace:^0.0.1",
     "@soda/soda-nashmarket": "workspace:^0.0.1",
-    "@soda/soda-opensea": "workspace:^0.0.1"
+    "@soda/soda-opensea": "workspace:^0.0.1",
+    "@soda/soda-util": "workspace:^0.0.1"
   },
   "devDependencies": {
     "eslint": "^7.7.0",
