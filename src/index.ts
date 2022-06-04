@@ -30,6 +30,12 @@ const APP_CONFIG: Record<number, AppConfig> = {
     storageService: ['ipfs'],
     mpService: ['opensea'],
     mediaType: ['image']
+  },
+  137: {
+    assetService: ['opensea'],
+    storageService: ['ipfs'],
+    mpService: ['opensea'],
+    mediaType: ['image']
   }
 }
 
