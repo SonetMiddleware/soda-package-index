@@ -15,7 +15,7 @@ export type AppConfig = {
 
 const APP_CONFIG: Record<number, AppConfig> = {
   4: {
-    assetService: ['opensea'],
+    assetService: ['platwin'],
     storageService: ['ipfs'],
     mpService: ['opensea'],
     mediaType: ['image']
@@ -27,13 +27,13 @@ const APP_CONFIG: Record<number, AppConfig> = {
     mediaType: ['image']
   },
   1: {
-    assetService: ['opensea'],
+    assetService: ['platwin'],
     storageService: ['ipfs'],
     mpService: ['opensea'],
     mediaType: ['image']
   },
   137: {
-    assetService: ['opensea'],
+    assetService: ['platwin'],
     storageService: ['ipfs'],
     mpService: ['opensea'],
     mediaType: ['image']
