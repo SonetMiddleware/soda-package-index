@@ -1,5 +1,7 @@
-import { ImageInit } from '@soda/soda-media-sdk'
 import { IpfsInit } from '@soda/soda-storage-sdk'
+
+import { ImageInit } from '@soda/soda-media-sdk'
+import { M3DInit } from '@soda/m4m-3d-gltf'
 
 import { ChainInit, PlatwinAssetInit } from '@soda/soda-asset'
 
@@ -18,25 +20,25 @@ const APP_CONFIG: Record<number, AppConfig> = {
     assetService: ['platwin'],
     storageService: ['ipfs'],
     mpService: ['opensea'],
-    mediaType: ['image']
+    mediaType: ['image', 'm3d']
   },
   80001: {
     assetService: ['platwin'],
     storageService: ['ipfs'],
     mpService: ['nash'],
-    mediaType: ['image']
+    mediaType: ['image', 'm3d']
   },
   1: {
     assetService: ['platwin'],
     storageService: ['ipfs'],
     mpService: ['opensea'],
-    mediaType: ['image']
+    mediaType: ['image', 'm3d']
   },
   137: {
     assetService: ['platwin'],
     storageService: ['ipfs'],
     mpService: ['opensea'],
-    mediaType: ['image']
+    mediaType: ['image', 'm3d']
   }
 }
 
@@ -47,8 +49,10 @@ export const getAppConfig = (chainId: number): AppConfig => {
   return APP_CONFIG[chainId]
 }
 const init = () => {
-  ImageInit()
   IpfsInit()
+
+  ImageInit()
+  M3DInit()
 
   ChainInit()
   PlatwinAssetInit()
