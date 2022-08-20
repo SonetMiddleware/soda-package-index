@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+
+
 {
   "compilerOptions": {
     "types": ["jest", "chrome"],
@@ -27,23 +28,3 @@
   "exclude": ["bin", "build", "node_modules", "./dist"],
   "include": ["src/**/*"]
 }
-=======
-{
-    "compilerOptions": {
-        "strict": true,
-        "outDir": "bin",
-        "target": "es2016",
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "sourceMap": true,
-        "experimentalDecorators": true,
-        "pretty": true,
-        "noFallthroughCasesInSwitch": true,
-        "noImplicitReturns": true,
-        "forceConsistentCasingInFileNames": true
-    },
-    "files": [
-        "index.ts"
-    ]
-}
->>>>>>> 9e29ac8cace695b6964c65532e5fd6c21943dc12
