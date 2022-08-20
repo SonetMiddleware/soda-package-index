@@ -1,0 +1,49 @@
+<<<<<<< HEAD
+{
+  "compilerOptions": {
+    "types": ["jest", "chrome"],
+    "skipLibCheck": true,
+    "declaration": true,
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "strict": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "@@/*": ["src/.umi/*"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "noFallthroughCasesInSwitch": true
+  },
+  "exclude": ["bin", "build", "node_modules", "./dist"],
+  "include": ["src/**/*"]
+}
+=======
+{
+    "compilerOptions": {
+        "strict": true,
+        "outDir": "bin",
+        "target": "es2016",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "pretty": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "files": [
+        "index.ts"
+    ]
+}
+>>>>>>> 9e29ac8cace695b6964c65532e5fd6c21943dc12
