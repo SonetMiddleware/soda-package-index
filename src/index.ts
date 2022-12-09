@@ -7,6 +7,7 @@ import { ChainInit, PlatwinAssetInit } from '@soda/soda-asset'
 
 import nashmarketInit from '@soda/soda-nashmarket'
 import openseaInit from '@soda/soda-opensea'
+import ongaiaInit from '@soda/soda-ongaia'
 
 export type AppConfig = {
   assetService: string[]
@@ -15,7 +16,7 @@ export type AppConfig = {
   mediaType: string[]
 }
 
-const APP_CONFIG: Record<number, AppConfig> = {
+const APP_CONFIG: Record<number | string, AppConfig> = {
   4: {
     assetService: ['platwin'],
     storageService: ['ipfs'],
@@ -39,6 +40,18 @@ const APP_CONFIG: Record<number, AppConfig> = {
     storageService: ['ipfs'],
     mpService: ['opensea'],
     mediaType: ['image', 'm3d']
+  },
+  flowmain: {
+    assetService: ['platwin'],
+    storageService: ['ipfs'],
+    mpService: ['ongaia'],
+    mediaType: ['image', 'm3d']
+  },
+  flowtest: {
+    assetService: ['platwin'],
+    storageService: ['ipfs'],
+    mpService: ['ongaia'],
+    mediaType: ['image', 'm3d']
   }
 }
 
@@ -59,6 +72,7 @@ const init = () => {
 
   nashmarketInit()
   openseaInit()
+  ongaiaInit()
 }
 
 export default init

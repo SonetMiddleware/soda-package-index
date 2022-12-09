@@ -18,13 +18,14 @@
   "author": "EuclidTwin",
   "license": "ISC",
   "dependencies": {
+    "@soda/m4m-3d-gltf": "workspace:^0.0.1",
     "@soda/soda-asset": "workspace:^0.0.1",
     "@soda/soda-media-sdk": "workspace:^0.0.1",
-    "@soda/soda-storage-sdk": "workspace:^0.0.1",
     "@soda/soda-nashmarket": "workspace:^0.0.1",
+    "@soda/soda-ongaia": "workspace:^0.0.1",
     "@soda/soda-opensea": "workspace:^0.0.1",
-    "@soda/soda-util": "workspace:^0.0.1",
-    "@soda/m4m-3d-gltf": "workspace:^0.0.1"
+    "@soda/soda-storage-sdk": "workspace:^0.0.1",
+    "@soda/soda-util": "workspace:^0.0.1"
   },
   "devDependencies": {
     "eslint": "^7.7.0",
